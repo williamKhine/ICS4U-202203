@@ -38,7 +38,7 @@ def getSearchValue():
     return(searchValue)
 
 
-def detectBounds(list):
+def detectBounds(uniqueSortedList):
 
     highestValue = uniqueSortedList[len(uniqueSortedList) - 1]
     lowestValue = uniqueSortedList[0]
@@ -49,7 +49,7 @@ def binarySearch():
 
     uniqueSortedList =  makeUniqueSortedList()
     searchValue = getSearchValue()
-    detectBounds()
+    detectBounds(uniqueSortedList)
 
 
     if searchValue == uniqueSortedList[middleIndex]:
