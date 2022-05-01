@@ -1,0 +1,8 @@
+# ICS4U Unit 1 Activity 3 - Plagiarism Case Study
+
+Phone Pyae Thet Khine
+Teacher NEDA
+ICS4U
+26th Jan 2022
+
+According to the text in the case study, Frank surely did write down the words which he saw on the internet while researching. Accident or not, plagiarism is plagiarism. So, when the teacher ran a plagiarism test on his paper, the teacher found the part where it might have been plagiarized, as said in the text “In a random search, his teacher found the significant passage and accused Frank of plagiarism.” This is because Frank did not immediately cite the passage he wrote and then later forgets that the idea was not his own but from elsewhere. To avoid this kind of situation in the future, Frank should cite the piece of text immediately after he has written it in his paper. I would advise him to use citation helper software or a plugin in the word processor that he is using and to run an online plagiarism checker before he submits it to his school. Some schools provide the plagiarism checker for the students; if not Frank could use other free online checkers that can do the job. He should also paraphrase or quote and put in his own ideas. Frank must give credit to the original owner of the work or the idea that he is using in his own paper. Also, if he wants to quote passages from books in his local library, he must be sure to find the details of the book online to properly cite the original work. It also seems that Frank has also been asking his dad about the topic he is researching “the science of bog water marshes”, I would make him ask his father about where he gets his sources. This could potentially avoid any unwanted plagiarism accusations and further complications.
