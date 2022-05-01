@@ -1,5 +1,5 @@
 # ICS4U
-Obsidian vault for ICS4U
+Obsidian vault for ICS4U. Download Obsidian here https://obsidian.md or just use this website.
 
 This reposiory is for Yorkville Highschool ICS4U - 202203
 All the assignments and answers are included here.
