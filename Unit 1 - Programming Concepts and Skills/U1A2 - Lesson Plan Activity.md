@@ -30,16 +30,32 @@ ICS4U
 - Read about one dimensional and two dimensional arrays.
 
 ##### Unit 1 - Activity 6 - Algorithm Reading & Worksheet - (2 hours)
-- 
+- Research Python algorithms.
+- Learn how sorting algorithms work.
+- Learn which algorithms are more efficient using Big O Notation.
+
 ##### Unit 1 - Activity 7 - Modular Programming Reading, Worksheet & Exit Card - (3 hours)
-- 
+- Learn how to divide up programs by modules.
+- Learn to import modules to the main script.
+- Research how to scale up programs and maintainance.
+
 ##### Unit 1 - Activity 8 - Designing Algorithm Reading & Worksheet - (2 hours)
-- 
+- Learn how various algroithms work.
+- Look at the questions and think about how can the algorithm be designed.
+- Research about the topics included in the questions and figure out how to design those algorithms efficiently.
+
 ##### Unit 1 - Activity 9 - Programming Reading & Assignment - (4 hours)*
-- 
+- Read the questions and think about how I can program the asked program using all the knowledge I have learnt before this activity.
+- Research about how to program a well-documented code with easy-to-read naming conventions for variables.
+- Read the marking scheme and think about how I can write this program in a way that I can maximise my marks.
+
 ##### Unit 1 - Activity 11 - Unit Test Part 1 - (2 hours)*
-- 
 ##### Unit 1 - Activity 12 - Unit Test Part 2 - (2 hours)*
-- 
+- Review the whole chapter.
+- Do some reading on programming theories.
+- Get enough sleep and answer the test.
+
 ##### Unit 1 - Activity 13 - Test Reflection - (1 hour) Unit 1 - Activity 14 - Unit Wrap Up & Personal Reflection - (1 hour)
-- 
+- Reflect on the whole chapter and how I did in the test.
+- Think about what I have learnt in this chapter.
+- Think about what I can do after completing this unit.
