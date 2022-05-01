@@ -5,11 +5,3 @@ Teacher NEDA
 ICS4U
 6th Feb 2022
 
-### Binary Search
-```python
-
-```
-### Linear Search
-```python
-
-```

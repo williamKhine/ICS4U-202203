@@ -1,12 +1,23 @@
 - [x] Unit 1 - Activity 1 - Student Feedback about Computer Science - (1 hour) [[U1A1 - Student Feedback about Computer Science]]
+
 - [ ] Unit 1 - Activity 2 - Lesson Plan Activity - (1 hour) [[U1A2 - Lesson Plan Activity]]
+
 - [x] Unit 1 - Activity 3 - Plagiarism Lesson & Quiz - (2 hours) [[U1A3 - Plagiarism Case Study]]
+
 - [ ] Unit 1 - Activity 4 - Data Types Worksheet - (2 hours) [[U1A4 - Data Types Worksheet]]
+
 - [ ] Unit 1 - Activity 5 - Non-numeric Comparisions Worksheet - (2 hours) [[U1A5 - Non-numeric Comparisions Worksheet]]
+
 - [ ] Unit 1 - Activity 6 - Array Reading & Worksheet - (2 hours) [[U1A6 - Array Reading and Worksheet]]
+
 - [ ] Unit 1 - Activity 7 - Modular Programming Reading, Worksheet & Exit Card - (3 hours) [[U1A7 - Modular Programming Reading, Worksheet & Exit Card]]
+
 - [ ] Unit 1 - Activity 8 - Designing Algorithm Reading & Worksheet - (2 hours) [[U1A8 - Designing Algorithm Reading & Worksheet]]
+
 - [ ] *Unit 1 - Activity 9 - Code Maintenance Reading and Worksheet - (4 hours)* [[U1A9 - Code Maintenance Reading and Worksheet]]
+
 - [ ] *Unit 1 - Activity 11 - Unit Test Part 1 - (2 hours)* [[]]
+
 - [ ] *Unit 1 - Activity 12 - Unit Test Part 2 - (2 hours)* [[]]
+
 - [ ] Unit 1 - Activity 13 - Test Reflection - (1 hour) Unit 1 - Activity 14 - Unit Wrap Up & Personal Reflection - (1 hour) [[]]
