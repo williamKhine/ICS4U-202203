@@ -6,7 +6,7 @@
 # Q2) Write a program to enter integer type data into array and print the values in reverse order.
 def enterIntegerAndReverse():
     arr = []  # Declaring a blank array
-    # Getting user input with error handling
+# Getting user input with error handling
     while True:
         x = input("Enter an integer (q to quit): ")
         if x == 'q':
@@ -24,11 +24,11 @@ def enterIntegerAndReverse():
 
 
 def sumTwoArrays():
-    # Declaring two arrays with data hard coded
+# Declaring two arrays with data hard coded
     arrayA = [1, 2, 3, 4, 5]
     arrayB = [5, 4, 3, 2, 1]
 
-    # Variable with value '0' inside to accomodate the sum of two arrays
+# Variable with value '0' inside to accomodate the sum of two arrays
     sumAB = 0
 
     for x in arrayA:
@@ -43,11 +43,11 @@ def sumTwoArrays():
 
 
 def productOfTwoArrays():
-    # Random module to fill the array with random integers 1 to 9 inclusive
+# Random module to fill the array with random integers 1 to 9 inclusive
     import random
 
     arrayP = []
-    # Variable to hold product of the array. Value is '0' because of product.
+# Variable to hold product of the array. Value is '0' because of product.
     productP = 1
 
     for i in range(20):

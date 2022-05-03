@@ -164,11 +164,35 @@ def linearSearch():
 # Selection Sort algorithm
 
 # Q4) Create a recursive algorithm to calculate a factorial
+def factorial():
+    """
+    This function takes an integer from the user and prints the factorial of that integer
+    """
+# Trying to get an integer from the user and if the user enters a non-integer, it will print an error
+# message.
+    try:
+        x = int(input("Enter an integer for factorial: "))
+    except ValueError:
+        print("ValueError. Enter an integer for factorial")
+
+# A while loop that is multiplying the factorial by the integer and then subtracting 1 from the
+# integer until the integer is 0.
+    factorial = 1
+
+    while x != 0:
+        factorial *= x
+        x -= 1
+    print(f"Factorial of your integer is: {factorial}")
+
 
 
 # ================= #
 # Calling Functions #
 # ================= #
-insertDeleteIntegers()
+# insertDeleteIntegers()
 # binarySearch()
 # linearSearch()
+
+
+
+factorial()
