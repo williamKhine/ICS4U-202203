@@ -15,8 +15,6 @@ def enterIntegerAndReverse():
 			arr.append(int(x))
 		except ValueError:
 			print("ValueError. Enter an integer (q to quit): ")
-		else:
-			pass
 
 		
 	print(f"{arr} <== Original array.")
