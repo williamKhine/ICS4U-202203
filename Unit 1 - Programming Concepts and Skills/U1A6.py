@@ -41,7 +41,8 @@ def deleteIntegers(arr):
             print("IndexError. Enter a valid index number.")
         except ValueError:
             print("ValueError. Enter the index you want to remove (q to quit): ")
-        print(arr)
+        else:
+            print(arr)
     print("Array is empty. No more elements to remove.")
 
 
@@ -55,61 +56,6 @@ def insertDeleteIntegers():
     deleteIntegers(arr)
 
 # Q2) Create linear and binary search algorithm to find data in an array
-
-
-def makeUniqueSortedList():
-    import random
-
-    highestInteger = 99
-    lowestInteger = 0
-
-    unsortedList = []
-    sortedList = []
-
-    for i in range(30):
-        unsortedList.append(random.randint(lowestInteger, highestInteger))
-
-    uniqueSortedList = list(set(unsortedList))
-
-    print(f"\n{unsortedList} <== unsorted list.\n")
-    print(f"{uniqueSortedList} <== unique sorted list.\n")
-
-    return(uniqueSortedList)
-
-
-def getSearchValue():
-
-    while True:
-        try:
-            searchValue = int(
-                input(f"Which integer do you want to search? (0 to 99): "))
-        except ValueError:
-            print("ValueError. Please enter an integer.")
-        else:
-            break
-
-    return(searchValue)
-
-
-def detectBounds(uniqueSortedList):
-
-    highestValue = uniqueSortedList[len(uniqueSortedList) - 1]
-    lowestValue = uniqueSortedList[0]
-    middleIndex = len(uniqueSortedList) // 2
-
-
-# Binary Search #
-
-def binarySearch():
-
-    uniqueSortedList = makeUniqueSortedList()
-    searchValue = getSearchValue()
-    detectBounds(uniqueSortedList)
-
-    # if searchValue == uniqueSortedList:
-    # print(f"The value that you are searching for is at index {middleIndex}.")
-
-# Linear Search #
 
 
 def makeUniqueList():
@@ -135,6 +81,44 @@ def makeUniqueList():
 
     return(uniqueList)
 
+def getSearchValue():
+
+    while True:
+        try:
+            searchValue = int(
+                input(f"Which integer do you want to search? (0 to 99): "))
+        except ValueError:
+            print("ValueError. Please enter an integer.")
+        else:
+            break
+
+    return(searchValue)
+
+
+def detectBounds(uniqueSortedList):
+
+    highestValue = uniqueSortedList[len(uniqueSortedList) - 1]
+    lowestValue = uniqueSortedList[0]
+    middleIndex = len(uniqueSortedList) // 2
+
+# ============= #
+# Binary Search #
+# ============= #
+
+
+def binarySearch():
+
+    uniqueSortedList = makeUniqueList()
+    searchValue = getSearchValue()
+    detectBounds(uniqueSortedList)
+
+    # if searchValue == uniqueSortedList:
+    # print(f"The value that you are searching for is at index {middleIndex}.")
+
+# ============= #
+# Linear Search #
+# ============= #
+
 
 def linearSearch():
     """
@@ -146,18 +130,59 @@ def linearSearch():
     uniqueList = makeUniqueList()
     searchValue = getSearchValue()
 
+# Iterating through the list and checking if the search value is equal to the value in the list.
+# If it is, it prints the index of the value in the list.
     for i in range(len(uniqueList) - 1):
         if searchValue == uniqueList[i]:
             print(f"The value that you are searching for is at index {i}.")
             break
+# Checking if the search value is not in the list.
     else:
         print(
             f"The value that you are searching for is not in the list: \n{uniqueList}")
 
 
 # Q3) create sorting algorithm using bubble, insertion, selection to sort data in an array
+def makeRandomList():
+    """
+    It creates a list of 30 random integers between 0 and 99
+    :return: A list of 30 random integers between 0 and 99.
+    """
+    import random
+    highestInteger = 99
+    lowestInteger = 0
+
+    randomList = []
+
+    for i in range(30):
+        randomList.append(random.randint(lowestInteger, highestInteger))
+
+
+    print(f"\n{randomList} <== Random list.\n")
+
+    return(randomList)
 
 # Bubble Sort algorithm
+def bubbleSort():
+    import time
+
+    uniqueList = makeRandomList()
+    time.sleep(2)
+    l = len(uniqueList)
+
+    for i in range(l):
+        for j in range(l):
+            k = j + 1
+            try:
+                if uniqueList[j] > uniqueList[k]:
+                    uniqueList[j], uniqueList[k] = uniqueList[k], uniqueList[j]
+                    print(uniqueList)
+                    time.sleep(0.05)
+                    print(i, j, l)
+            except IndexError:
+                break
+    print(f"\n{uniqueList} <== Sorted array")
+
 
 # Insertion Sort algorithm
 
@@ -185,14 +210,12 @@ def factorial():
     print(f"Factorial of your integer is: {factorial}")
 
 
-
 # ================= #
 # Calling Functions #
 # ================= #
 # insertDeleteIntegers()
 # binarySearch()
 # linearSearch()
+bubbleSort()
 
-
-
-factorial()
+# factorial()
