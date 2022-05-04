@@ -4,6 +4,7 @@
 
 # Q1) Write an Algorithm to insert and delete array elements
 
+
 def insertIntegers(arr):
     """
     The function `insertIntegers` takes an array as an argument and appends integers to the array until
@@ -164,29 +165,73 @@ def makeRandomList():
 
 # Bubble Sort algorithm
 def bubbleSort():
+    """
+    The function makes a random list, then iterates through the list, comparing each element to the next
+    element, and if the first element is greater than the second element, the two elements are swapped
+    """
     import time
 
-    uniqueList = makeRandomList()
+    randomList = makeRandomList()
     time.sleep(2)
-    l = len(uniqueList)
+    l = len(randomList)
 
+# Iterating through the list and comparing each element to the next element, and if the first element
+# is greater than the second element, the two elements are swapped.
+    print("Starting Bubble Sort")
     for i in range(l):
         for j in range(l):
             k = j + 1
             try:
-                if uniqueList[j] > uniqueList[k]:
-                    uniqueList[j], uniqueList[k] = uniqueList[k], uniqueList[j]
-                    print(uniqueList)
+                if randomList[j] > randomList[k]:
+                    randomList[j], randomList[k] = randomList[k], randomList[j]
+                    print(randomList)
                     time.sleep(0.05)
-                    print(i, j, l)
             except IndexError:
                 break
-    print(f"\n{uniqueList} <== Sorted array")
+# Printing the sorted array.
+    print(f"\n{randomList} <== Sorted array")
 
 
 # Insertion Sort algorithm
+def insertionSort():
+    """
+    For each element in the list, if the element is less than the element before it, swap the two
+    elements
+    """
+    import time
+
+    randomList = makeRandomList()
+    time.sleep(2)
+    l = len(randomList)
+
+# Iterating through the list and comparing each element to the element before it, and if the
+# element is less than the element before it, the two elements are swapped.
+    print("Starting Insertion Sort")
+    for h in range(l):
+        for i in range(1, l):
+            j = i - 1
+
+            if randomList[i] < randomList[j]:
+                randomList[i], randomList[j] = randomList[j], randomList[i]
+                print(randomList)
+                time.sleep(0.05)
+
 
 # Selection Sort algorithm
+
+def selectionSort():
+
+    import time
+    randomList = makeRandomList()
+    l = len(randomList)
+
+    lowestVal = randomList[0]
+    for i in range(1, l):
+
+
+
+
+
 
 # Q4) Create a recursive algorithm to calculate a factorial
 def factorial():
@@ -216,6 +261,7 @@ def factorial():
 # insertDeleteIntegers()
 # binarySearch()
 # linearSearch()
-bubbleSort()
-
+# bubbleSort()
+# insertionSort()
+selectionSort()
 # factorial()
