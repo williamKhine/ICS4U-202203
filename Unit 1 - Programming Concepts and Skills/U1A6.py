@@ -5,6 +5,9 @@
 # Q1) Write an Algorithm to insert and delete array elements
 
 
+from operator import indexOf
+
+
 def insertIntegers(arr):
     """
     The function `insertIntegers` takes an array as an argument and appends integers to the array until
@@ -219,14 +222,15 @@ def insertionSort():
 
 # Selection Sort algorithm
 
-def selectionSort():
+# def selectionSort():
 
-    import time
-    randomList = makeRandomList()
-    l = len(randomList)
+#     import time
+#     randomList = makeRandomList()
+#     l = len(randomList)
 
-    lowestVal = randomList[0]
-    for i in range(1, l):
+#     lowestValIndex = 0
+#     for i in range(1, l):
+#         if randomList[i] < randomList[lowestValIndex]:
 
 
 
@@ -261,7 +265,7 @@ def factorial():
 # insertDeleteIntegers()
 # binarySearch()
 # linearSearch()
-# bubbleSort()
-# insertionSort()
-selectionSort()
+bubbleSort()
+insertionSort()
+# selectionSort()
 # factorial()
