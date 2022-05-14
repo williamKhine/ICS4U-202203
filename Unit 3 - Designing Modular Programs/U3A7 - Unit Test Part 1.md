@@ -9,11 +9,16 @@ ICS4U
 ##### Q1) Define, using examples where appropriate, the following computer terms:
 1) Unified Modeling Language
 
+
 2) Inheritance
+
 
 3) Modules
 
+
 4) Object Oriented Programming
+
+
 
 ##### Thinking/Inquiry
 ##### Q2)  Compute a program to show use of classes or methods in program.
