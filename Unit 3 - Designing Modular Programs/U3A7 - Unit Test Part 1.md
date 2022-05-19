@@ -36,26 +36,67 @@ class Human(LivingThing): # Child Class
 Even when the function `die()` is not defined in the `Human` class, it can still be called since `Human` class inherits all the attributes from the parent class (`LivingThing`). Every `LivingThing` will die someday. Unless `Human` class overrides the `die()` method and calls the `immortal()` method.
 
 3) Modules
-
+Modules are componentes (small sections of a program) written separately from the main script, in some languages, exported and the imported to the main program using keywords like `import`. This helps compartmentalize the program into many small files which are easier to maintain and is much more organized than programming everything inside one big file such as the main script.
+Example:
+```python
+# in the file greeting.py
+def greet(name):
+	print(f"Hi, {name}")
+```
+```python
+# in the file main.py
+import greeting
+greeting.great("William") # calling a function inside another file.
+```
 
 4) Object Oriented Programming
-
+Object Oriented Programming (OOP) consists of data structures and made easy for programmers to access and model data by defining objects and blueprints which can then be called to make a new instance of the object. OOP makes development easier and more secured by features such as encapsulation, only giving out the necessary data/values by Abstraction, sharing methods by Inheritance and changing inherited methods to suit the needs by Polymorphism.
 
 
 ##### Thinking/Inquiry
 ##### Q2)  Compute a program to show use of classes or methods in program.
+```python
+class Student:
+    def __init__(self, name, age, gender):
+        self.name = name
+        self.age = age
+        self.gender = gender
+    
+    def printProfile(self):
+        print(self.name, self.age, self.gender)
 
+william = Student("William", 19, "Male")
+william.printProfile()```
+Classes makes it easier for programmers to access or add the date into a datavase with a single function. All the data modelling is done here.
 
 #### Application
 ##### Q3) Demonstrate the evidence to design sub program in any programming language.
+Sub-programs are programs inside a larger program disigned to solve something and can be reused many times. Unlike modules which needs to be imported, sub-programs can be written directly in the main script and be called to solve a number of logical problems and calcualations which strays aray from the main call stack but returns to it eventually with the problem which it is meant to be handle, solved.
+Sub-program Example:
+```python
+def subProgram():
+    print(0.1)
+    print(0.2)
+    print(0.3)
 
+def mainProgram():
+    print(1)
+    print(2)
+    subProgram()
+    print(4)
+
+mainProgram()```
 
 #### Communication
 ##### Q4)  Clarify and explain the following terms with examples.
-Abstract Data Types
+- Abstract Data Types
+Abstract Data Types are special kind of data type which is unknown to the user and the user cannot see how the data is logically calculated. The outputed data type is of the main primative data types such as `string`, `integer` and etc. but the inner logic is unknown. Example of ADTs are `Stack()`, `push()`, `pop()`.
 
-Stack
+- Stack
 
-Queue
 
-Dictionary
+- Queue
+
+
+- Dictionary
+
