@@ -26,8 +26,8 @@ def greet(name):
 	print(f"Hi, {name}")
 
 # in the file main.py
-import greeting
-greeting.great("William") # calling a function inside another file.
+# import greeting
+# greeting.great("William") # calling a function inside another file.
 
 # Q2)
 
@@ -58,3 +58,31 @@ def mainProgram():
 
 mainProgram()
 
+# Q4) Stack
+
+stack = []
+
+def stacking(item):
+    stack.insert(0, item)
+    print(stack)
+
+stacking(1)
+stacking(2)
+stacking(3)
+
+# Q4) Queue
+
+queue = []
+
+def queing(item):
+    queue.append(item)
+    print(queue)
+
+queing(1)
+queing(2)
+queing(3)
+
+# Q4) Dictionaries
+
+williamkhine = {"name": "William Khine", "age": 19}
+print(williamkhine["age"])

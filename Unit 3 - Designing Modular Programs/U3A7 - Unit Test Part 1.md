@@ -33,6 +33,11 @@ class Human(LivingThing): # Child Class
 	def sleep(self): # Method Overriding
 		print("Human sleeping")
 ```
+Output
+```txt
+
+```
+
 Even when the function `die()` is not defined in the `Human` class, it can still be called since `Human` class inherits all the attributes from the parent class (`LivingThing`). Every `LivingThing` will die someday. Unless `Human` class overrides the `die()` method and calls the `immortal()` method.
 
 3) Modules
@@ -47,6 +52,10 @@ def greet(name):
 # in the file main.py
 import greeting
 greeting.great("William") # calling a function inside another file.
+```
+Output
+```txt
+
 ```
 
 4) Object Oriented Programming
@@ -67,6 +76,11 @@ class Student:
 
 william = Student("William", 19, "Male")
 william.printProfile()```
+Output
+```txt
+
+```
+
 Classes makes it easier for programmers to access or add the date into a datavase with a single function. All the data modelling is done here.
 
 #### Application
@@ -86,6 +100,10 @@ def mainProgram():
     print(4)
 
 mainProgram()```
+Output
+```txt
+
+```
 
 #### Communication
 ##### Q4)  Clarify and explain the following terms with examples.
@@ -93,10 +111,48 @@ mainProgram()```
 Abstract Data Types are special kind of data type which is unknown to the user and the user cannot see how the data is logically calculated. The outputed data type is of the main primative data types such as `string`, `integer` and etc. but the inner logic is unknown. Example of ADTs are `Stack()`, `push()`, `pop()`.
 
 - Stack
+Stack is an Abstract Data Type which functions like a list of items that needs to be done with the behavior of a stack. Like in the real life, the last item added is the first one to be processed (Last in First out). The Stack takes the item on the top most of the stack and the first item to be added is the last one to be processed.
+```python
+stack = []
 
+def stacking(item):
+    stack.insert(0, item)
+    print(stack)
+
+stacking(1)
+stacking(2)
+stacking(3)
+```
+Output
+```txt
+
+```
 
 - Queue
 
+```python
+queue = []
+
+def queing(item):
+    queue.append(item)
+    print(queue)
+
+queing(1)
+queing(2)
+queing(3)
+```
+Output
+```txt
+
+```
 
 - Dictionary
 
+```python
+williamkhine = {"name": "William Khine", "age": 19}
+print(williamkhine["age"])
+```
+Output
+```txt
+
+```
