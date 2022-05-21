@@ -16,8 +16,7 @@ Algorithm for Binary Search (Array needs to be a sorted array)
 2. Access the value in the middle index of the array.
 3. If the middle value matches the search value, return the middle index. If the values do not match, continue.
 4. If the search value is less than the middle value, discard the right side of the array. If the value is greater than the middle value, discard the left side of the array.
-5. Repeat step number 2 till the search value is found.
-	1. If the value is not found till the last element to be searched, return "not found".
+5. Repeat step number 2 till the search value is found. If the value is not found till the last element to be searched, return "not found".
 ```
 
 2) Computational complexity analysis
