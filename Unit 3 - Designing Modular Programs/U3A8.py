@@ -12,11 +12,11 @@ def function2():
 
 # Q1) 3) Loops
 
-x = 100
+x = 10
 
 while x != 0:
-    x -= 1
     print(x)
+    x -= 1
 
 # Q2)
 
@@ -78,18 +78,24 @@ def binarySearch(uniqueList, searchValue):
 
 
 def fibonacci():
-    n = int(input("How many sequences of the fibonacci do you want?: ")) - 2
+    n = int(input("How many sequences of the fibonacci do you want?: "))
 
-    fibonacci = [1, 2]
-    for i in range(n):
-        fibonacci.append(fibonacci[-1] + fibonacci[-2])
-    print(fibonacci)
+    if n == 1:
+        print([1])
+    elif n == 2:
+        print([1, 2])
+    else:
+        n -= 2
+
+        fibonacci = [1, 2]
+        for i in range(n):
+            fibonacci.append(fibonacci[-1] + fibonacci[-2])
+        print(fibonacci)
 
 fibonacci()
 
 # Q4)
 
-from turtle import *
 import turtle as t
 
 t.speed(1)
