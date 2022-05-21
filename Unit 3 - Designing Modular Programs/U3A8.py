@@ -1,12 +1,11 @@
 # Q1) 2) Recursive Functions
 
-def function1():
-    print('calling function2')
-    function2()
+def recursiveFunction(num):
+    if num != 0:
+        print(num)
+        recursiveFunction(num - 1)
 
-def function2():
-    print("calling function1")
-    function1()
+recursiveFunction(5)
 
 # function2()
 
@@ -56,23 +55,68 @@ def makeUniqueList():
 
     return(uniqueList)
 
-def linearSearch(uniqueList, searchValue):
 
-# Iterating through the list and checking if the search value is equal to the value in the list.
-# If it is, it prints the index of the value in the list.
-    for i in range(len(uniqueList) - 1):
+def linearSearch(uniqueList, searchValue):
+    count = 0
+    for i in range(len(uniqueList) - 1):   
+        count += 1 
         if searchValue == uniqueList[i]:
-            print(f"The value that you are searching for is at index {i}.")
+            print(f"The value that you are searching for is at index {i} (Linear Search).")
             break
-# Checking if the search value is not in the list.
+
     else:
         print(
             f"The value that you are searching for is not in the list: \n{uniqueList}")
+    return(count)
 
 def binarySearch(uniqueList, searchValue):
-    pass
+    
+    start_index = 0
+    end_index = len(uniqueList) - 1
+
+    count = 0
+
+    found = False
+
+    while start_index <= end_index:
+        middle_index = start_index + (end_index - start_index) // 2
+        middle_value = uniqueList[middle_index]
+
+        if middle_value == searchValue:
+            print(f"The value that you are searching for is at index {middle_index} (Binary Search).")
+            found = True
+            count += 1
+            break
+        elif middle_value < searchValue:
+            start_index = middle_index + 1
+            count += 1
+        else:
+            end_index = middle_index - 1
+            count += 1
+            
+    if found is False:
+        print(f"The value that you are searching for is not in the list: \n{uniqueList}")
+
+    return(count)
 
 
+import time
+
+uniqueList = makeUniqueList()
+searchValue = int(input("What number are you searching for? (1 - 100): "))
+
+start = time.time()
+linearCount = linearSearch(uniqueList, searchValue)
+end = time.time()
+linearTime = end - start
+
+start = time.time()
+binaryCount = binarySearch(uniqueList, searchValue)
+end = time.time()
+binaryTime = (end - start)
+
+print(f"Linear Search makes {linearCount} operation(s) and took {linearTime}")
+print(f"Binary Search makes {binaryCount} operation(s) and took {binaryTime}")
 
 # Q3)
 
