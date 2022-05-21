@@ -4,10 +4,6 @@
 
 # Q1) Write an Algorithm to insert and delete array elements
 
-
-from operator import indexOf
-
-
 def insertIntegers(arr):
     """
     The function `insertIntegers` takes an array as an argument and appends integers to the array until

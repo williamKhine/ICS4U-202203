@@ -14,28 +14,42 @@ Unified Modeling Language (UML) is a standardization of maodelling languages cre
 Inheritance, like in the real world, allows a class to inherit all the attributes of the parent class such as the class-methods, private variables and the blueprint. After the class has inherited the attributes from the parent class, it (the child class) can then override and overload the methods to suit their specific needs.
 
 ```python
-class LivingThing: # Parent Class
+class LivingThing:  # Parent Class
+    def eat(self):
+        print("Eating")
 
-	def eat(self):
-		print("Eating")
-		
-	def sleep(self):
-		print("Sleeping")
-		
-	def die(self):
-		print("Dead")
+    def sleep(self):
+        print("Sleeping")
 
-class Human(LivingThing): # Child Class
+    def die(self):
+        print("Dead")
 
-	def eat(self, food): # Method Overloading
-		print(f"Human eating {food}")
+class Human(LivingThing):  # Child Class
+    def eat(self, food):  # Method Overloading
+        print(f"Human eating {food}")
 
-	def sleep(self): # Method Overriding
-		print("Human sleeping")
+    def sleep(self):  # Method Overriding
+        print("Human sleeping")
+
+deer = LivingThing()
+david = Human()
+
+deer.eat()
+deer.sleep()
+deer.die()
+
+david.eat("deer meat")
+david.sleep()
+david.die()
 ```
 Output
 ```txt
-
+Eating
+Sleeping
+Dead
+Human eating deer meat
+Human sleeping
+Dead
 ```
 
 Even when the function `die()` is not defined in the `Human` class, it can still be called since `Human` class inherits all the attributes from the parent class (`LivingThing`). Every `LivingThing` will die someday. Unless `Human` class overrides the `die()` method and calls the `immortal()` method.
@@ -55,7 +69,7 @@ greeting.great("William") # calling a function inside another file.
 ```
 Output
 ```txt
-
+Hi, William
 ```
 
 4) Object Oriented Programming
@@ -78,7 +92,7 @@ william = Student("William", 19, "Male")
 william.printProfile()```
 Output
 ```txt
-
+William 19 Male
 ```
 
 Classes makes it easier for programmers to access or add the date into a datavase with a single function. All the data modelling is done here.
@@ -102,7 +116,12 @@ def mainProgram():
 mainProgram()```
 Output
 ```txt
-
+1
+2
+0.1
+0.2
+0.3
+4
 ```
 
 #### Communication
@@ -125,7 +144,9 @@ stacking(3)
 ```
 Output
 ```txt
-
+[1]
+[2, 1]
+[3, 2, 1]
 ```
 
 - Queue
@@ -143,7 +164,9 @@ queing(3)
 ```
 Output
 ```txt
-
+[1]
+[1, 2]
+[1, 2, 3]
 ```
 
 - Dictionary
@@ -154,5 +177,5 @@ print(williamkhine["age"])
 ```
 Output
 ```txt
-
+19
 ```
