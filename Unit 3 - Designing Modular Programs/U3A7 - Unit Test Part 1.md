@@ -7,7 +7,7 @@ ICS4U
 
 #### Knowledge/Understanding/Communication 
 ##### Q1) Define, using examples where appropriate, the following computer terms:
-1) Unified Modeling Language
+1) Unified Modelling Language
 Unified Modeling Language (UML) is a standardization of maodelling languages created to help visualize a system or a program with the use of disgrams. This language is not a language per se, but a set of rules guiding to draw the diagrams in the standardized way.
 
 2) Inheritance
@@ -89,7 +89,8 @@ class Student:
         print(self.name, self.age, self.gender)
 
 william = Student("William", 19, "Male")
-william.printProfile()```
+william.printProfile()
+```
 Output
 ```txt
 William 19 Male
@@ -113,7 +114,8 @@ def mainProgram():
     subProgram()
     print(4)
 
-mainProgram()```
+mainProgram()
+```
 Output
 ```txt
 1

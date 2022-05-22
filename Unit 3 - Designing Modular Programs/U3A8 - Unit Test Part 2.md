@@ -172,6 +172,8 @@ The value that you are searching for is at index 18 (Binary Search).
 Linear Search makes 19 operation(s) and took 7.796287536621094e-05
 Binary Search makes 4 operation(s) and took 1.9311904907226562e-05
 ```
+This program counts the number of operations that each searching algorithm does and also measures the time taken for each algorithm to perform its task. These are then displayed in the output. As we can see in the output, Binary search is superior than Linear Search. It takes less time and operations for the Binary Search Algorithm to successfully search for the asked value.
+
 #### Application
 ##### Q3) Create an algorithm and the program for Fibonacci numbers.
 ```txt
@@ -215,4 +217,6 @@ t.begin_fill()
 t.circle(100)
 t.end_fill()
 ```
+Output
+
 ![[Pasted image 20220522023916.png]]
