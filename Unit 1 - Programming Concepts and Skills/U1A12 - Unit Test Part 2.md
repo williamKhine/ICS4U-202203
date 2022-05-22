@@ -21,6 +21,38 @@ A User Manual is like the documentation of the program where it will be stated h
 
 #### Thinking/Inquiry
 ##### Q2) Compute the program with an algorithm to print sum and product of an array.
+Algorithm
+```
+1. Create Array
+2. Create variable for product of value 1
+3. Create variable for sum of value 0
+4. Loop to sum all elements
+5. Add to sum variable
+6. Print sum
+7. Loop to multiply all elements
+8. Multiply values to product variable
+9. Print product
+```
+```python
+arr = [1, 2, 3, 4, 5]
+product = 1
+sum = 0
+
+for i in arr:
+    sum += i
+
+print("Sum of array =", sum)
+
+for i in arr:
+    product *= i
+
+print("Product of array =", product)
+```
+Output
+```txt
+Sum of array = 15
+Product of array = 120
+```
 
 #### Communication 
 ##### Q3) Explain what is software testing and basis of software testing? List different types of testing for software project to ensure program correctness.
@@ -39,5 +71,18 @@ Making algorithm for all the numbers would take very long. Here's algorithm for 
 
 ##### Q4b) Device the program to print 2D array in Matrix form.
 ```python
+arr = [1, 2, 3, 4], [4, 3, 2, 1]
 
+def matrix(arr):
+    for i in arr:
+        for j in i:
+            print(j, end=" ")
+        print()
+
+matrix(arr)
+```
+Output
+```txt
+1 2 3 4 
+4 3 2 1 
 ```
