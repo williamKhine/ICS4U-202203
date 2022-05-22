@@ -10,7 +10,7 @@ ICS4U
 1) Unified Modelling Language
 Unified Modeling Language (UML) is a standardization of maodelling languages created to help visualize a system or a program with the use of disgrams. This language is not a language per se, but a set of rules guiding to draw the diagrams in the standardized way.
 
-2) Inheritance
+2) Inheritance
 Inheritance, like in the real world, allows a class to inherit all the attributes of the parent class such as the class-methods, private variables and the blueprint. After the class has inherited the attributes from the parent class, it (the child class) can then override and overload the methods to suit their specific needs.
 
 ```python
