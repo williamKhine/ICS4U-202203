@@ -249,15 +249,15 @@ def insertionSort():
 
 # Selection Sort algorithm
 
-def selectionSort():
+# def selectionSort():
 
-    import time
-    randomList = makeRandomList()
-    l = len(randomList)
+#     import time
+#     randomList = makeRandomList()
+#     l = len(randomList)
 
-    lowestValIndex = 0
-    for i in range(1, l):
-        if randomList[i] < randomList[lowestValIndex]:
+#     lowestValIndex = 0
+#     for i in range(1, l):
+#         if randomList[i] < randomList[lowestValIndex]:
 
 
 
@@ -291,6 +291,7 @@ def factorial():
 # ================= #
 # insertDeleteIntegers()
 binarySearch()
+print(binarySearch.__doc__)
 linearSearch()
 # bubbleSort()
 # insertionSort()
