@@ -94,26 +94,57 @@ def getSearchValue():
 
     return(searchValue)
 
-
-def detectBounds(uniqueSortedList):
-
-    highestValue = uniqueSortedList[len(uniqueSortedList) - 1]
-    lowestValue = uniqueSortedList[0]
-    middleIndex = len(uniqueSortedList) // 2
-
 # ============= #
 # Binary Search #
 # ============= #
 
 
 def binarySearch():
+    """
+    The function takes a list of unique numbers and a search value, and returns the index of the search
+    value in the list
+    """
 
-    uniqueSortedList = makeUniqueList()
+# Declaring variables that will be used in the binarySearch() function.
+    uniqueList = makeUniqueList()
     searchValue = getSearchValue()
-    detectBounds(uniqueSortedList)
 
-    # if searchValue == uniqueSortedList:
-    # print(f"The value that you are searching for is at index {middleIndex}.")
+    start_index = 0
+    end_index = len(uniqueList) - 1
+
+    count = 0
+
+    found = False
+
+# A binary search algorithm. It is searching for a value in a list.
+# Finding the middle index of the list.
+    while start_index <= end_index:
+        middle_index = start_index + (end_index - start_index) // 2
+        middle_value = uniqueList[middle_index]
+
+# Checking if the middle value is equal to the search value. If it is, it prints the index of the
+# middle value.
+        if middle_value == searchValue:
+            print(f"The value that you are searching for is at index {middle_index} (Binary Search).")
+            found = True
+            count += 1
+            break
+# Checking if the middle value is less than the search value. If it is, it adds 1 to the
+# start index and adds 1 to the count.
+        elif middle_value < searchValue:
+            start_index = middle_index + 1
+            count += 1
+# Checking if the middle value is greater than the search value. If it is, it subtracts 1
+# from the end index and adds 1 to the count.
+        else:
+            end_index = middle_index - 1
+            count += 1
+            
+# Checking if the search value is not in the list. If it is not in the list, it prints
+# a message.
+    if found is False:
+        print(f"The value that you are searching for is not in the list: \n{uniqueList}")
+
 
 # ============= #
 # Linear Search #
@@ -134,7 +165,7 @@ def linearSearch():
 # If it is, it prints the index of the value in the list.
     for i in range(len(uniqueList) - 1):
         if searchValue == uniqueList[i]:
-            print(f"The value that you are searching for is at index {i}.")
+            print(f"The value that you are searching for is at index {i} Linear Search.")
             break
 # Checking if the search value is not in the list.
     else:
@@ -259,9 +290,9 @@ def factorial():
 # Calling Functions #
 # ================= #
 # insertDeleteIntegers()
-# binarySearch()
-# linearSearch()
-bubbleSort()
-insertionSort()
+binarySearch()
+linearSearch()
+# bubbleSort()
+# insertionSort()
 # selectionSort()
 # factorial()
