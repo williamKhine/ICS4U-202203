@@ -1,2 +1,8 @@
+# Obsidian
 .obsidian/
+
+# MacOS
 **/.DS_Store
+
+# IntelliJ Idea
+.idea/
