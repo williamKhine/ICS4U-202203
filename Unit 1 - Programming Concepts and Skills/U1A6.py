@@ -4,9 +4,9 @@
 
 # Q1) Write an Algorithm to insert and delete array elements
 
-def insertIntegers(arr):
+def insert_integers(arr):
     """
-    The function `insertIntegers` takes an array as an argument and appends integers to the array until
+    The function `insert_integers` takes an array as an argument and appends integers to the array until
     the user enters 'q' to quit
 
     :param arr: The array to insert integers into
@@ -23,7 +23,7 @@ def insertIntegers(arr):
     print(f"{arr} <== Inserted array elements")
 
 
-def deleteIntegers(arr):
+def delete_integers(arr):
     """
     The function takes in an array and allows the user to remove elements from the array until the array
     is empty
@@ -46,19 +46,20 @@ def deleteIntegers(arr):
     print("Array is empty. No more elements to remove.")
 
 
-def insertDeleteIntegers():
+def insert_delete_integers():
     """
     This function will insert integers into an array and then delete integers from the array.
     """
     arr = []  # Declaring a blank array
 
-    insertIntegers(arr)
-    deleteIntegers(arr)
+    insert_integers(arr)
+    delete_integers(arr)
+
 
 # Q2) Create linear and binary search algorithm to find data in an array
 
 
-def makeUniqueList():
+def make_unique_list():
     """
     It creates a list of 30 random integers between 0 and 99, then it removes all duplicates from the
     list
@@ -66,84 +67,85 @@ def makeUniqueList():
     """
     import random
 
-    highestInteger = 99
-    lowestInteger = 0
+    highest_integer = 99
+    lowest_integer = 0
 
-    nonUniqueList = []
+    non_unique_list = []
 
     for i in range(30):
-        nonUniqueList.append(random.randint(lowestInteger, highestInteger))
+        non_unique_list.append(random.randint(lowest_integer, highest_integer))
 
-    uniqueList = list((set(nonUniqueList)))
+    unique_list = list((set(non_unique_list)))
 
-    print(f"\n{nonUniqueList} <== list, probably not unique.\n")
-    print(f"{uniqueList} <== truely unique list.\n")
+    print(f"\n{non_unique_list} <== list, probably not unique.\n")
+    print(f"{unique_list} <== truly unique list.\n")
 
-    return(uniqueList)
+    return unique_list
 
-def getSearchValue():
 
+def get_search_value():
     while True:
         try:
-            searchValue = int(
+            search_value = int(
                 input(f"Which integer do you want to search? (0 to 99): "))
         except ValueError:
             print("ValueError. Please enter an integer.")
         else:
             break
 
-    return(searchValue)
+    return search_value
+
 
 # ============= #
 # Binary Search #
 # ============= #
 
 
-def binarySearch():
+def binary_search():
     """
     The function takes a list of unique numbers and a search value, and returns the index of the search
     value in the list
     """
 
-# Declaring variables that will be used in the binarySearch() function.
-    uniqueList = makeUniqueList()
-    searchValue = getSearchValue()
+    # Declaring variables that will be used in the binary_search() function.
+    unique_list = make_unique_list()
+    search_value = get_search_value()
 
     start_index = 0
-    end_index = len(uniqueList) - 1
+    end_index = len(unique_list) - 1
 
     count = 0
 
     found = False
 
-# A binary search algorithm. It is searching for a value in a list.
-# Finding the middle index of the list.
+    # A binary search algorithm. It is searching for a value in a list.
+    # Finding the middle index of the list.
     while start_index <= end_index:
         middle_index = start_index + (end_index - start_index) // 2
-        middle_value = uniqueList[middle_index]
+        middle_value = unique_list[middle_index]
 
-# Checking if the middle value is equal to the search value. If it is, it prints the index of the
-# middle value.
-        if middle_value == searchValue:
+        # Checking if the middle value is equal to the search value. If it is, it prints the index of the
+        # middle value.
+        if middle_value == search_value:
             print(f"The value that you are searching for is at index {middle_index} (Binary Search).")
             found = True
             count += 1
             break
-# Checking if the middle value is less than the search value. If it is, it adds 1 to the
-# start index and adds 1 to the count.
-        elif middle_value < searchValue:
+        # Checking if the middle value is less than the search value. If it is, it adds 1 to the
+        # start index and adds 1 to the count.
+        elif middle_value < search_value:
             start_index = middle_index + 1
             count += 1
-# Checking if the middle value is greater than the search value. If it is, it subtracts 1
-# from the end index and adds 1 to the count.
+        # Checking if the middle value is greater than the search value. If it is, it subtracts 1
+        # from the end index and adds 1 to the count.
         else:
             end_index = middle_index - 1
             count += 1
-            
-# Checking if the search value is not in the list. If it is not in the list, it prints
-# a message.
+
+    # Checking if the search value is not in the list. If it is not in the list, it prints
+    # a message.
     if found is False:
-        print(f"The value that you are searching for is not in the list: \n{uniqueList}")
+        print(f"The value that you are searching for is not in the list: \n{unique_list}")
 
 
 # ============= #
@@ -151,99 +153,99 @@ def binarySearch():
 # ============= #
 
 
-def linearSearch():
+def linear_search():
     """
-    The function linearSearch() takes a list of unique numbers and a search value, and returns the index
+    The function linear_search() takes a list of unique numbers and a search value, and returns the index
     of the search value if it is in the list, and returns a message if the search value is not in the
     list.
     """
 
-    uniqueList = makeUniqueList()
-    searchValue = getSearchValue()
+    unique_list = make_unique_list()
+    search_value = get_search_value()
 
-# Iterating through the list and checking if the search value is equal to the value in the list.
-# If it is, it prints the index of the value in the list.
-    for i in range(len(uniqueList) - 1):
-        if searchValue == uniqueList[i]:
+    # Iterating through the list and checking if the search value is equal to the value in the list.
+    # If it is, it prints the index of the value in the list.
+    for i in range(len(unique_list) - 1):
+        if search_value == unique_list[i]:
             print(f"The value that you are searching for is at index {i} Linear Search.")
             break
-# Checking if the search value is not in the list.
+    # Checking if the search value is not in the list.
     else:
         print(
-            f"The value that you are searching for is not in the list: \n{uniqueList}")
+            f"The value that you are searching for is not in the list: \n{unique_list}")
 
 
 # Q3) create sorting algorithm using bubble, insertion, selection to sort data in an array
-def makeRandomList():
+def make_random_list():
     """
     It creates a list of 30 random integers between 0 and 99
     :return: A list of 30 random integers between 0 and 99.
     """
     import random
-    highestInteger = 99
-    lowestInteger = 0
+    highest_integer = 99
+    lowest_integer = 0
 
-    randomList = []
+    random_list = []
 
     for i in range(30):
-        randomList.append(random.randint(lowestInteger, highestInteger))
+        random_list.append(random.randint(lowest_integer, highest_integer))
 
+    print(f"\n{random_list} <== Random list.\n")
 
-    print(f"\n{randomList} <== Random list.\n")
+    return random_list
 
-    return(randomList)
 
 # Bubble Sort algorithm
-def bubbleSort():
+def bubble_sort():
     """
     The function makes a random list, then iterates through the list, comparing each element to the next
     element, and if the first element is greater than the second element, the two elements are swapped
     """
     import time
 
-    randomList = makeRandomList()
+    random_list = make_random_list()
     time.sleep(2)
-    l = len(randomList)
+    list_len = len(random_list)
 
-# Iterating through the list and comparing each element to the next element, and if the first element
-# is greater than the second element, the two elements are swapped.
+    # Iterating through the list and comparing each element to the next element, and if the first element
+    # is greater than the second element, the two elements are swapped.
     print("Starting Bubble Sort")
-    for i in range(l):
-        for j in range(l):
+    for i in range(list_len):
+        for j in range(list_len):
             k = j + 1
             try:
-                if randomList[j] > randomList[k]:
-                    randomList[j], randomList[k] = randomList[k], randomList[j]
-                    print(randomList)
+                if random_list[j] > random_list[k]:
+                    random_list[j], random_list[k] = random_list[k], random_list[j]
+                    print(random_list)
                     time.sleep(0.05)
             except IndexError:
                 break
-# Printing the sorted array.
-    print(f"\n{randomList} <== Sorted array")
+    # Printing the sorted array.
+    print(f"\n{random_list} <== Sorted array")
 
 
 # Insertion Sort algorithm
-def insertionSort():
+def insertion_sort():
     """
     For each element in the list, if the element is less than the element before it, swap the two
     elements
     """
     import time
 
-    randomList = makeRandomList()
+    random_list = make_random_list()
     time.sleep(2)
-    l = len(randomList)
+    list_len = len(random_list)
 
-# Iterating through the list and comparing each element to the element before it, and if the
-# element is less than the element before it, the two elements are swapped.
+    # Iterating through the list and comparing each element to the element before it, and if the
+    # element is less than the element before it, the two elements are swapped.
     print("Starting Insertion Sort")
-    for h in range(l):
-        for i in range(1, l):
+    for h in range(list_len):
+        for i in range(1, list_len):
             j = i - 1
 
-            if randomList[i] < randomList[j]:
-                randomList[i], randomList[j] = randomList[j], randomList[i]
-                print(randomList)
+            if random_list[i] < random_list[j]:
+                random_list[i], random_list[j] = random_list[j], random_list[i]
+                print(random_list)
                 time.sleep(0.05)
 
 
@@ -252,7 +254,7 @@ def insertionSort():
 # def selectionSort():
 
 #     import time
-#     randomList = makeRandomList()
+#     randomList = make_random_list()
 #     l = len(randomList)
 
 #     lowestValIndex = 0
@@ -260,40 +262,35 @@ def insertionSort():
 #         if randomList[i] < randomList[lowestValIndex]:
 
 
-
-
-
-
 # Q4) Create a recursive algorithm to calculate a factorial
 def factorial():
     """
     This function takes an integer from the user and prints the factorial of that integer
     """
-# Trying to get an integer from the user and if the user enters a non-integer, it will print an error
-# message.
+    # Trying to get an integer from the user and if the user enters a non-integer, it will print an error
+    # message.
     try:
         x = int(input("Enter an integer for factorial: "))
     except ValueError:
         print("ValueError. Enter an integer for factorial")
 
-# A while loop that is multiplying the factorial by the integer and then subtracting 1 from the
-# integer until the integer is 0.
-    factorial = 1
+    # A while loop that is multiplying the factorial by the integer and then subtracting 1 from the
+    # integer until the integer is 0.
+    factorial_result = 1
 
     while x != 0:
-        factorial *= x
+        factorial_result *= x
         x -= 1
-    print(f"Factorial of your integer is: {factorial}")
+    print(f"Factorial of your integer is: {factorial_result}")
 
 
 # ================= #
 # Calling Functions #
 # ================= #
-# insertDeleteIntegers()
-binarySearch()
-print(binarySearch.__doc__)
-linearSearch()
-# bubbleSort()
-# insertionSort()
+# insert_delete_integers()
+binary_search()
+linear_search()
+# bubble_sort()
+# insertion_sort()
 # selectionSort()
 # factorial()

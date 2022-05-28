@@ -65,7 +65,7 @@ Output
 #### Thinking/Inquiry
 ##### Q2)  Compute a program to compare linear search and binary search.
 ```python
-def getSearchValue():
+def get_search_value():
 
     while True:
         try:
@@ -78,7 +78,7 @@ def getSearchValue():
 
     return(searchValue)
 
-def makeUniqueList():
+def make_unique_list():
     import random
 
     highestInteger = 99
@@ -97,7 +97,7 @@ def makeUniqueList():
     return(uniqueList)
 
 
-def linearSearch(uniqueList, searchValue):
+def linear_search(uniqueList, searchValue):
     count = 0
     for i in range(len(uniqueList) - 1):    
         if searchValue == uniqueList[i]:
@@ -111,7 +111,7 @@ def linearSearch(uniqueList, searchValue):
             
     return(count)
 
-def binarySearch(uniqueList, searchValue):
+def binary_search(uniqueList, searchValue):
     
     start_index = 0
     end_index = len(uniqueList) - 1
@@ -144,16 +144,16 @@ def binarySearch(uniqueList, searchValue):
 
 import time
 
-uniqueList = makeUniqueList()
+uniqueList = make_unique_list()
 searchValue = int(input("What number are you searching for? (1 - 100): "))
 
 start = time.time()
-linearCount = linearSearch(uniqueList, searchValue)
+linearCount = linear_search(uniqueList, searchValue)
 end = time.time()
 linearTime = end - start
 
 start = time.time()
-binaryCount = binarySearch(uniqueList, searchValue)
+binaryCount = binary_search(uniqueList, searchValue)
 end = time.time()
 binaryTime = (end - start)
 
