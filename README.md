@@ -8,4 +8,6 @@ Please be careful of plagiarism.
 
 I recommend only using this for referencing.
 
+Used Python Version python@3.10
+
 *Note: Code is this repository are over-engineered.*
