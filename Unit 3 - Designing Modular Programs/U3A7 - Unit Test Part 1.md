@@ -85,11 +85,11 @@ class Student:
         self.age = age
         self.gender = gender
     
-    def printProfile(self):
+    def print_profile(self):
         print(self.name, self.age, self.gender)
 
 william = Student("William", 19, "Male")
-william.printProfile()
+william.print_profile()
 ```
 Output
 ```txt
@@ -103,18 +103,18 @@ Classes makes it easier for programmers to access or add the date into a datavas
 Sub-programs are programs inside a larger program disigned to solve something and can be reused many times. Unlike modules which needs to be imported, sub-programs can be written directly in the main script and be called to solve a number of logical problems and calcualations which strays aray from the main call stack but returns to it eventually with the problem which it is meant to be handle, solved.
 Sub-program Example:
 ```python
-def subProgram():
+def sub_program():
     print(0.1)
     print(0.2)
     print(0.3)
 
-def mainProgram():
+def main_program():
     print(1)
     print(2)
-    subProgram()
+    sub_program()
     print(4)
 
-mainProgram()
+main_program()
 ```
 Output
 ```txt
@@ -156,13 +156,13 @@ Output
 ```python
 queue = []
 
-def queing(item):
+def queuing(item):
     queue.append(item)
     print(queue)
 
-queing(1)
-queing(2)
-queing(3)
+queuing(1)
+queuing(2)
+queuing(3)
 ```
 Output
 ```txt

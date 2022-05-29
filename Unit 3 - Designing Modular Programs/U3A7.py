@@ -7,8 +7,10 @@ class LivingThing:  # Parent Class
     def sleep(self):
         print("Sleeping")
 
-    def die(self):
+    @staticmethod
+    def die():
         print("Dead")
+
 
 class Human(LivingThing):  # Child Class
     def eat(self, food):  # Method Overloading
@@ -16,6 +18,7 @@ class Human(LivingThing):  # Child Class
 
     def sleep(self):  # Method Overriding
         print("Human sleeping")
+
 
 deer = LivingThing()
 david = Human()
@@ -30,6 +33,7 @@ david.die()
 
 # Q1) 3)
 
+
 # in the file greeting.py
 def greet(name):
     print(f"Hi, {name}")
@@ -37,6 +41,8 @@ def greet(name):
 # in the file main.py
 # import greeting
 # greeting.great("William") # calling a function inside another file.
+
+
 greet("William")
 
 # Q2)
@@ -48,30 +54,30 @@ class Student:
         self.age = age
         self.gender = gender
 
-    def printProfile(self):
+    def print_profile(self):
         print(self.name, self.age, self.gender)
 
 
 william = Student("William", 19, "Male")
-william.printProfile()
+william.print_profile()
 
 # Q3)
 
 
-def subProgram():
+def sub_program():
     print(0.1)
     print(0.2)
     print(0.3)
 
 
-def mainProgram():
+def main_program():
     print(1)
     print(2)
-    subProgram()
+    sub_program()
     print(4)
 
 
-mainProgram()
+main_program()
 
 # Q4) Stack
 
@@ -92,16 +98,16 @@ stacking(3)
 queue = []
 
 
-def queing(item):
+def queuing(item):
     queue.append(item)
     print(queue)
 
 
-queing(1)
-queing(2)
-queing(3)
+queuing(1)
+queuing(2)
+queuing(3)
 
 # Q4) Dictionaries
 
-williamkhine = {"name": "William Khine", "age": 19}
-print(williamkhine["age"])
+wk = {"name": "William Khine", "age": 19}
+print(wk["age"])
