@@ -6,6 +6,7 @@ print(arr[0])
 
 # Q1) 3) Encapsulation
 
+
 class Student:
     def __init__(self, name, grade, age) -> None:
         self.name = name # Public

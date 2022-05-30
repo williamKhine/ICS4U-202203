@@ -55,7 +55,7 @@ Dead
 Even when the function `die()` is not defined in the `Human` class, it can still be called since `Human` class inherits all the attributes from the parent class (`LivingThing`). Every `LivingThing` will die someday. Unless `Human` class overrides the `die()` method and calls the `immortal()` method.
 
 3) Modules
-Modules are componentes (small sections of a program) written separately from the main script, in some languages, exported and the imported to the main program using keywords like `import`. This helps compartmentalize the program into many small files which are easier to maintain and is much more organized than programming everything inside one big file such as the main script.
+Modules are components (small sections of a program) written separately from the main script, in some languages, exported and the imported to the main program using keywords like `import`. This helps compartmentalize the program into many small files which are easier to maintain and is much more organized than programming everything inside one big file such as the main script.
 Example:
 ```python
 # in the file greeting.py

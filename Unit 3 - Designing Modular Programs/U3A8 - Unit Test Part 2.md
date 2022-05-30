@@ -24,12 +24,12 @@ Computational Complexity Analysis measures how wfficient an algorithm is and wha
 3) Recursive function
 Recursive Functions are functions that has a recursive loop inside it and in that loop calls the function that initiates the loop itself sometimes with a different parameter or argument.
 ```python
-def recursiveFunction(num):
+def recursive_function(num):
     if num != 0:
         print(num)
-        recursiveFunction(num - 1)
+        recursive_function(num - 1)
 
-recursiveFunction(5)
+recursive_function(5)
 ```
 Output
 ```txt
@@ -64,57 +64,62 @@ Output
 
 #### Thinking/Inquiry
 ##### Q2)  Compute a program to compare linear search and binary search.
+
 ```python
 def get_search_value():
-
     while True:
         try:
-            searchValue = int(
+            search_value = int(
                 input(f"Which integer do you want to search? (0 to 99): "))
         except ValueError:
             print("ValueError. Please enter an integer.")
         else:
             break
 
-    return(searchValue)
+    return search_value
+
 
 def make_unique_list():
+    """
+    It creates a list of 30 random integers between 0 and 99, then it removes all duplicates from the
+    list
+    :return: A list of unique integers.
+    """
     import random
 
-    highestInteger = 99
-    lowestInteger = 0
+    highest_integer = 99
+    lowest_integer = 0
 
-    nonUniqueList = []
+    non_unique_list = []
 
     for i in range(30):
-        nonUniqueList.append(random.randint(lowestInteger, highestInteger))
+        non_unique_list.append(random.randint(lowest_integer, highest_integer))
 
-    uniqueList = list((set(nonUniqueList)))
+    unique_list = list((set(non_unique_list)))
 
-    print(f"\n{nonUniqueList} <== list, probably not unique.\n")
-    print(f"{uniqueList} <== truely unique list.\n")
+    print(f"\n{non_unique_list} <== list, probably not unique.\n")
+    print(f"{unique_list} <== truly unique list.\n")
 
-    return(uniqueList)
+    return unique_list
 
 
-def linear_search(uniqueList, searchValue):
+def linear_search(unique_list, search_value):
     count = 0
-    for i in range(len(uniqueList) - 1):    
-        if searchValue == uniqueList[i]:
+    for i in range(len(unique_list) - 1):
+        count += 1
+        if search_value == unique_list[i]:
             print(f"The value that you are searching for is at index {i} (Linear Search).")
-            count += 1
             break
 
     else:
         print(
-            f"The value that you are searching for is not in the list: \n{uniqueList}")
-            
-    return(count)
+            f"The value that you are searching for is not in the list: \n{unique_list}")
+    return count
 
-def binary_search(uniqueList, searchValue):
-    
+
+def binary_search(unique_list, search_value):
     start_index = 0
-    end_index = len(uniqueList) - 1
+    end_index = len(unique_list) - 1
 
     count = 0
 
@@ -122,43 +127,43 @@ def binary_search(uniqueList, searchValue):
 
     while start_index <= end_index:
         middle_index = start_index + (end_index - start_index) // 2
-        middle_value = uniqueList[middle_index]
+        middle_value = unique_list[middle_index]
 
-        if middle_value == searchValue:
+        if middle_value == search_value:
             print(f"The value that you are searching for is at index {middle_index} (Binary Search).")
             found = True
             count += 1
             break
-        elif middle_value < searchValue:
+        elif middle_value < search_value:
             start_index = middle_index + 1
             count += 1
         else:
             end_index = middle_index - 1
             count += 1
-            
-    if found is False:
-        print(f"The value that you are searching for is not in the list: \n{uniqueList}")
 
-    return(count)
+    if found is False:
+        print(f"The value that you are searching for is not in the list: \n{unique_list}")
+
+    return count
 
 
 import time
 
-uniqueList = make_unique_list()
-searchValue = int(input("What number are you searching for? (1 - 100): "))
+unique_list_Q2 = make_unique_list()
+search_value_Q2 = int(input("What number are you searching for? (1 - 100): "))
 
 start = time.time()
-linearCount = linear_search(uniqueList, searchValue)
+linear_count = linear_search(unique_list_Q2, search_value_Q2)
 end = time.time()
-linearTime = end - start
+linear_time = end - start
 
 start = time.time()
-binaryCount = binary_search(uniqueList, searchValue)
+binary_count = binary_search(unique_list_Q2, search_value_Q2)
 end = time.time()
-binaryTime = (end - start)
+binary_time = (end - start)
 
-print(f"Linear Search makes {linearCount} operation(s) and took {linearTime}")
-print(f"Binary Search makes {binaryCount} operation(s) and took {binaryTime}")
+print(f"Linear Search makes {linear_count} operation(s) and took {linear_time}")
+print(f"Binary Search makes {binary_count} operation(s) and took {binary_time}")
 ```
 Output
 ```txt
@@ -193,10 +198,11 @@ def fibonacci():
     else:
         n -= 2
 
-        fibonacci = [1, 2]
+        fibonacci_result = [1, 2]
         for i in range(n):
-            fibonacci.append(fibonacci[-1] + fibonacci[-2])
-        print(fibonacci)
+            fibonacci_result.append(fibonacci_result[-1] + fibonacci_result[-2])
+        print(fibonacci_result)
+
 
 fibonacci()
 ```

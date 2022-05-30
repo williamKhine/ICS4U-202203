@@ -114,8 +114,6 @@ def binary_search():
     start_index = 0
     end_index = len(unique_list) - 1
 
-    count = 0
-
     found = False
 
     # A binary search algorithm. It is searching for a value in a list.
@@ -129,18 +127,15 @@ def binary_search():
         if middle_value == search_value:
             print(f"The value that you are searching for is at index {middle_index} (Binary Search).")
             found = True
-            count += 1
             break
         # Checking if the middle value is less than the search value. If it is, it adds 1 to the
         # start index and adds 1 to the count.
         elif middle_value < search_value:
             start_index = middle_index + 1
-            count += 1
         # Checking if the middle value is greater than the search value. If it is, it subtracts 1
         # from the end index and adds 1 to the count.
         else:
             end_index = middle_index - 1
-            count += 1
 
     # Checking if the search value is not in the list. If it is not in the list, it prints
     # a message.
@@ -165,9 +160,9 @@ def linear_search():
 
     # Iterating through the list and checking if the search value is equal to the value in the list.
     # If it is, it prints the index of the value in the list.
-    for i in range(len(unique_list) - 1):
+    for i in range(len(unique_list)):
         if search_value == unique_list[i]:
-            print(f"The value that you are searching for is at index {i} Linear Search.")
+            print(f"The value that you are searching for is at index {i} (Linear Search).")
             break
     # Checking if the search value is not in the list.
     else:
@@ -248,18 +243,36 @@ def insertion_sort():
                 print(random_list)
                 time.sleep(0.05)
 
+    print(f"\n{random_list} <== Sorted array")
+
 
 # Selection Sort algorithm
 
-# def selectionSort():
+def selection_sort():
+    """
+    The selection sort algorithm sorts an array by repeatedly finding the minimum element (considering ascending order) from
+    unsorted part and putting it at the beginning
+    """
 
-#     import time
-#     randomList = make_random_list()
-#     l = len(randomList)
+    import time
 
-#     lowestValIndex = 0
-#     for i in range(1, l):
-#         if randomList[i] < randomList[lowestValIndex]:
+    random_list = make_random_list()
+    time.sleep(2)
+    list_len = len(random_list)
+
+    print("Starting Selection Sort")
+    # Iterating through the list and comparing each element to the next element, and if the first element
+    # is greater than the second element, the two elements are swapped.
+    for i in range(list_len):
+        start_index = i
+        for j in range(start_index + 1, list_len):
+            if random_list[start_index] > random_list[j]:
+                start_index = j
+        random_list[i], random_list[start_index] = random_list[start_index], random_list[i]
+        print(random_list)
+        time.sleep(0.2)
+
+    print(f"\n{random_list} <== Sorted array")
 
 
 # Q4) Create a recursive algorithm to calculate a factorial
@@ -287,10 +300,14 @@ def factorial():
 # ================= #
 # Calling Functions #
 # ================= #
-# insert_delete_integers()
-binary_search()
-linear_search()
-# bubble_sort()
-# insertion_sort()
-# selectionSort()
-# factorial()
+def main():
+    insert_delete_integers()
+    binary_search()
+    linear_search()
+    bubble_sort()
+    insertion_sort()
+    selection_sort()
+    factorial()
+
+
+main()

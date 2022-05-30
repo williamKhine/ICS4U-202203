@@ -39,8 +39,8 @@ def greet(name):
     print(f"Hi, {name}")
 
 # in the file main.py
-# import greeting
-# greeting.great("William") # calling a function inside another file.
+import greeting
+greeting.great("William") # calling a function inside another file.
 
 
 greet("William")
