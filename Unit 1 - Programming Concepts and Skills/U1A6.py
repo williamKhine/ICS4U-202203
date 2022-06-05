@@ -75,7 +75,7 @@ def make_unique_list():
     for i in range(30):
         non_unique_list.append(random.randint(lowest_integer, highest_integer))
 
-    unique_list = list((set(non_unique_list)))
+    unique_list = list(set(non_unique_list))
 
     print(f"\n{non_unique_list} <== list, probably not unique.\n")
     print(f"{unique_list} <== truly unique list.\n")
@@ -301,13 +301,13 @@ def factorial():
 # Calling Functions #
 # ================= #
 def main():
-    insert_delete_integers()
-    binary_search()
-    linear_search()
+    # insert_delete_integers()
+    # binary_search()
+    # linear_search()
     bubble_sort()
-    insertion_sort()
-    selection_sort()
-    factorial()
+    # insertion_sort()
+    # selection_sort()
+    # factorial()
 
 
 main()
